@@ -1,0 +1,8 @@
+<h1>Add new image</h1>
+
+<%= simple_form_for @image do |f| %>
+  <%= f.input :title, placeholder: 'Image Title' %>
+  <%= f.input :category, placeholder: 'Image Category' %>
+  <%= f.input :description, placeholder: 'Image Description' %>
+  <%= f.file_field :submit, button_html: { value: 'Upload Image'} %>
+<% end %>
