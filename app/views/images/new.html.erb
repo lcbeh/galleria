@@ -4,5 +4,6 @@
   <%= f.input :title, placeholder: 'Image Title' %>
   <%= f.input :category, placeholder: 'Image Category' %>
   <%= f.input :description, placeholder: 'Image Description' %>
-  <%= f.file_field :submit, button_html: { value: 'Upload Image'} %>
+  <%= f.file_field :avatar %>
+  <%= f.button :submit, button_html: { value: 'Add Image'} %>
 <% end %>

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+
+  devise_for :users
   # get 'image/index'
   resources :images
 
-  root 'images#index'
+  root to: 'images#index'
 end

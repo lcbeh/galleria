@@ -34,16 +34,19 @@ gem 'fog'
 gem 'aws-sdk'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'simple_form'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'coveralls', require: false
   gem 'rspec-rails'
+  gem 'rake'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
-group :test do
-  gem 'capybara'
-end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

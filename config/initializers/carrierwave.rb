@@ -6,6 +6,7 @@ CarrierWave.configure do |config|
     :region                 => 'eu-west-1'
   }
   config.fog_directory  = ENV["AWS_S3_BUCKET"]
+  config.asset_host = ActionController::Base.asset_host
 end
 
 
@@ -29,14 +30,14 @@ CarrierWave::Uploader::Base.descendants.each do |klass|
     end
 end
 
-module CarrierWave
-  module MiniMagick
-    def quality(percentage)
-      manipulate! do |img|
-        img.quality(percentage.to_s)
-        img = yield(img) if block_given?
-        img
-      end
-    end
-  end
-end
+# module CarrierWave
+#   module MiniMagick
+#     def quality(percentage)
+#       manipulate! do |img|
+#         img.quality(percentage.to_s)
+#         img = yield(img) if block_given?
+#         img
+#       end
+#     end
+#   end
+# end
